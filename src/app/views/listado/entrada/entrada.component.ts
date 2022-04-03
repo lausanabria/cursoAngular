@@ -8,14 +8,11 @@ import { Entrada } from 'src/app/shared/interfaces/entrada';
 })
 export class EntradaComponent implements OnInit {
   @Input()
-  public entrada : Entrada;
+  public entrada : any;
 
 
   constructor() {
-    this.entrada ={
-      titulo: '',
-      resumen: ''
-    }
+
    }
 
 
