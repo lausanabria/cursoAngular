@@ -1,3 +1,5 @@
+import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
+import { FrontComponent } from './views/front/front.component';
 import { LoginComponent } from './views/login/login.component';
 import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-nosotros.component';
 import { NgModule } from '@angular/core';
@@ -8,10 +10,13 @@ import { ListadoComponent } from './views/listado/listado.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'listado', component: ListadoComponent },
-  { path: 'nosotros', component: AcercaDeNosotrosComponent },
+  {path: 'front', component: FrontComponent, children:[
+    { path: 'listado', component: ListadoComponent },
+    { path: 'nosotros', component: AcercaDeNosotrosComponent },
+    { path: 'detalle-entrada/:id', component: DetallesEntradaComponent }
+  ]},
 
-  { path: '', redirectTo: '/listado', pathMatch: 'full' },
+  { path: '', redirectTo: 'front/listado', pathMatch: 'full' },
   { path: '**', component: PaginaNoEncontradaComponent }
 ]
 

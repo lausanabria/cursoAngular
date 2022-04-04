@@ -2,7 +2,7 @@
   <h3>listado de entradas al blog</h3>
   <app-entrada *ngFor="let entrada of listadoEntradas"
   [entrada]="entrada"
-  (doEvent)="mostrarTitulo($event)"
+  (doEvent)="detalleEntrada($event)"
   ></app-entrada>
 
 </div>

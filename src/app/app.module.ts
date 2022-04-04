@@ -12,6 +12,8 @@ import { PaginaNoEncontradaComponent } from './views/pagina-no-encontrada/pagina
 import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-nosotros.component';
 import { LoginComponent } from './views/login/login.component';
 import { EspejoPipe } from './shared/pipes/espejo.pipe';
+import { FrontComponent } from './views/front/front.component';
+import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { EspejoPipe } from './shared/pipes/espejo.pipe';
     PaginaNoEncontradaComponent,
     AcercaDeNosotrosComponent,
     LoginComponent,
-    EspejoPipe
+    EspejoPipe,
+    FrontComponent,
+    DetallesEntradaComponent
   ],
   imports: [
     BrowserModule,

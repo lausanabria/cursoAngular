@@ -1,5 +1,6 @@
 import { EntradaService } from './../../shared/services/entrada.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado',
@@ -10,12 +11,16 @@ export class ListadoComponent implements OnInit {
 
   public listadoEntradas :any;
 
-  constructor(private entradaService : EntradaService) {
+  constructor(
+    private entradaService : EntradaService,
+    private router : Router
+    ) {
 
    }
 
-   mostrarTitulo(titulo: string){
-      alert(`Entrada seleccionada: ${titulo}.`)
+   public detalleEntrada(id: number) : void{
+      //alert(`Entrada seleccionada: ${id}.`)
+      this.router.navigate([`front/detalle-entrada/${id}`]);
    }
 
   private recuperarEntradas(): void{

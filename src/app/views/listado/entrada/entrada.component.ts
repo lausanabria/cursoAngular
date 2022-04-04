@@ -12,14 +12,14 @@ export class EntradaComponent implements OnInit {
   public entrada : any;
 
   @Output()
-  public doEvent: EventEmitter<string> = new EventEmitter<string>();
+  public doEvent: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {
       console.log(this.entrada)
    }
 
   public lanzarTitulo() : void {
-      this.doEvent.emit(this.entrada.title);
+      this.doEvent.emit(this.entrada.id);
   }
 
   public modificarClase() : any{
