@@ -1,3 +1,5 @@
+import { AuthGuard } from './auth.guard';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { DetallesEntradaComponent } from './views/detalles-entrada/detalles-entrada.component';
 import { FrontComponent } from './views/front/front.component';
 import { LoginComponent } from './views/login/login.component';
@@ -15,6 +17,7 @@ const routes: Routes = [
     { path: 'nosotros', component: AcercaDeNosotrosComponent },
     { path: 'detalle-entrada/:id', component: DetallesEntradaComponent }
   ]},
+  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
 
   { path: '', redirectTo: 'front/listado', pathMatch: 'full' },
   { path: '**', component: PaginaNoEncontradaComponent }
