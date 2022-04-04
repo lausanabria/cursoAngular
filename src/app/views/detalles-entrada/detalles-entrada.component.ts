@@ -33,7 +33,6 @@ export class DetallesEntradaComponent implements OnInit {
     this.entradaService.recuperarEntrada(this.id).subscribe(
       {
           next: (data: any) => {this.entrada=data},
-          error: (e: Error) => {console.error('error',e)},
           complete: () => {console.info('complete')}
       }
     );

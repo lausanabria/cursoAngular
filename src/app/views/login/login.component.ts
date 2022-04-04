@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
           this.tokenService.setToken(data);
 
-          this.router.navigate(['/listado'])
+          this.router.navigate(['front/listado'])
         },
         error: (e:Error) => {console.error("Error al realizar el acceso")},
         complete: () => {console.info('complete')}
