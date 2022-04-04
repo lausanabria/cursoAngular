@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Entrada } from 'src/app/shared/interfaces/entrada';
+
 
 @Component({
   selector: 'app-entrada',
@@ -10,11 +11,24 @@ export class EntradaComponent implements OnInit {
   @Input()
   public entrada : any;
 
+  @Output()
+  public doEvent: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
-
+      console.log(this.entrada)
    }
 
+  public lanzarTitulo() : void {
+      this.doEvent.emit(this.entrada.title);
+  }
+
+  public modificarClase() : any{
+
+    return {
+      'claro': this.entrada.id%2==0,
+      'oscuro': this.entrada.id %2 !=0
+    }
+  }
 
   ngOnInit(): void {
   }

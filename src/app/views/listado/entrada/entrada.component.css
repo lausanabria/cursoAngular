@@ -1,8 +1,18 @@
 #entrada {
-  background-color: aqua;
   border-radius: 10px;
 }
 
 #entrada * {
   padding: 10px;
+}
+
+.claro{
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+.oscuro{
+  background-color: purple;
+  border-radius: 10px;
+  color:white;
 }

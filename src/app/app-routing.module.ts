@@ -1,3 +1,4 @@
+import { LoginComponent } from './views/login/login.component';
 import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-nosotros.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,6 +7,7 @@ import { PaginaNoEncontradaComponent } from './views/pagina-no-encontrada/pagina
 import { ListadoComponent } from './views/listado/listado.component';
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   { path: 'listado', component: ListadoComponent },
   { path: 'nosotros', component: AcercaDeNosotrosComponent },
 

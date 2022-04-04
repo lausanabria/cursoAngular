@@ -1,6 +1,5 @@
 import { EntradaService } from './../../shared/services/entrada.service';
 import { Component, OnInit } from '@angular/core';
-import { Entrada } from 'src/app/shared/interfaces/entrada';
 
 @Component({
   selector: 'app-listado',
@@ -22,8 +21,10 @@ export class ListadoComponent implements OnInit {
   private recuperarEntradas(): void{
     this.entradaService.recuperarEntradas().subscribe(
       {
-        next: (data) => {this.listadoEntradas=data},
-        error: (e) => {console.error(e)},
+        next: (data) => {this.listadoEntradas=data
+        //console.log('listado',this.listadoEntradas)
+        },
+        error: (e) => {console.error('error',e)},
         complete: () => {console.info('complete')}
       })
   }
